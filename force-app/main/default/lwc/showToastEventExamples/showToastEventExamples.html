@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="ShowToastEvent Examples">
+        <div class="slds-m-around_medium">
+            The following buttons will show the four types of variant of <b>ShowToastEvents</b>. If you want to see who each ShowToastEvent works. Please click on the corresponding buttons.
+            <div class="slds-align_absolute-center slds-m-top_small">
+                <lightning-button 
+                    variant="neutral"  
+                    label="Information"
+                    class="slds-m-right_x-small" 
+                    onclick={showToastInfo}>
+                </lightning-button>
+                <lightning-button 
+                    variant="destructive" 
+                    label="Error"
+                    class="slds-m-right_x-small"  
+                    onclick={showToastError}>
+                </lightning-button> 
+                <lightning-button 
+                    variant="success" 
+                    label="Success" 
+                    class="slds-m-right_x-small" 
+                    onclick={showToastSuccess}>
+                </lightning-button> 
+                <lightning-button 
+                    variant="destructive-text" 
+                    label="Warning" 
+                    onclick={showToastWarning}>
+                </lightning-button> 
+            </div>
+            
+        </div>
+    </lightning-card>
+</template>

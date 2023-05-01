@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Parent to Child-(P2C) Way-3: Sending Data on Action at Parent- Account" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_medium"> Hello Again, I am another Parent Component, One of my other parent component used this "DisplayRecords" Child component, and he liked it and advise me to use it when I search my contacts. In this example,I prepared my data by using imperative Apex approach and I send it to my child along with the columns. Now, When I search my contacts, my child component will display them for me in the below part. </p>
+            <lightning-input
+                type="search"
+                class="slds-m-bottom_medium"
+                label="Please type any key to search your contacts"
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <template if:true={contacts}>
+                <div><b>Contact Search Results:</b></div>
+                <c-p2c-display-records
+                    records={contacts}
+                    fields={columns}>
+                 </c-p2c-display-records>
+            </template>            
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Calculator: Sum of Two Numbers">
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                type="number" 
+                name="input1" 
+                label="Enter number one"
+                value={num1}
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <lightning-input 
+                type="number" 
+                name="input2" 
+                label="Enter number two"
+                value={num2}
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <div class="slds-m-top_small">
+                The sum of {num1} and {num2} is {total}.
+            </div>
+        </div>
+    </lightning-card>
+</template>

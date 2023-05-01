@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Record Edit Form - Case" icon-name="standard:case">
+        <div class="slds-m-around_medium">
+        <lightning-record-edit-form
+        record-id={recordId}
+        object-api-name={objectName}
+        onsuccess={successHandler}>
+            <lightning-messages></lightning-messages>
+            <lightning-output-field field-name={fields.account}></lightning-output-field>
+                <lightning-output-field field-name={fields.contact}></lightning-output-field>
+                <lightning-input-field field-name={fields.subject}></lightning-input-field>
+                <lightning-input-field field-name={fields.priority}></lightning-input-field>
+                <lightning-input-field field-name={fields.status}></lightning-input-field>
+                <lightning-input-field field-name={fields.description}></lightning-input-field>
+                <lightning-input-field field-name={fields.origin}></lightning-input-field>
+                <div class="slds-align_absolute-center slds-m-top_medium">
+                    <lightning-button
+                        type="reset"
+                        label="Cancel"
+                        variant="neutral"
+                        class="slds-m-right_small">
+                    </lightning-button>
+                    <lightning-button
+                        type="submit"
+                        label="Save"
+                        variant="brand">
+                    </lightning-button>
+                </div>
+    </lightning-record-edit-form>
+            
+
+        </div>
+    </lightning-card>
+</template>

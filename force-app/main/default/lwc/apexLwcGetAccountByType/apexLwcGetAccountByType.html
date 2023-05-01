@@ -1,0 +1,14 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Wire Apex LWC with Parameters-Account" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <template if:true={accounts.data}>
+                <lightning-datatable
+                    key-field="Id"
+                    columns={columns}
+                    data={accounts.data}>
+                </lightning-datatable>
+        </template>
+        </div>
+    </lightning-card>
+</template>

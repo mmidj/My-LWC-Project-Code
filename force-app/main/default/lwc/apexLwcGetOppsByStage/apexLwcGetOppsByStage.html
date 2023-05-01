@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Wire Apex LWC with Parameters-Opportunity" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            <template if:true={opps.data}>           
+                <lightning-datatable
+                    key-field="Id"
+                    columns={columns}
+                    data={opps.data}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

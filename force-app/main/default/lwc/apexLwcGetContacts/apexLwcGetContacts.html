@@ -1,0 +1,14 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Wire Apex LWC Get Contacts" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <template if:true={contacts.data}>
+                <lightning-datatable
+                    key-field="id"
+                    data={contacts.data}
+                    columns={columns}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

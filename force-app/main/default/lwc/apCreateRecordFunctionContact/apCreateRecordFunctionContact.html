@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="getRecord Function - Contact Object" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <form class="contactForm">
+                <lightning-input
+                    type="text"
+                    label="First Name"
+                    name="FirstName"
+                    onkeyup={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    type="text"
+                    label="Last Name"
+                    name="LastName"
+                    onkeyup={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    placeholder="youremail@test.com"
+                    type="email"
+                    label="Email"
+                    name="Email"
+                    onkeyup={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    type="checkbox"
+                    label="Email Opt Out?"
+                    name="HasOptedOutOfEmail"
+                    onkeyup={changeHandler}>
+                </lightning-input>  
+                <lightning-input
+                    type="text"
+                    label="Department"
+                    name="Department"
+                    onkeyup={changeHandler}>
+                </lightning-input>                      
+                <lightning-input
+                    type="date"
+                    label="Birth Date"
+                    name="Birthdate"
+                    onkeyup={changeHandler}>
+                </lightning-input>
+                <div class="slds-m-top_medium slds-align_absolute-center">
+                    <lightning-button
+                        variant="brand"
+                        label="Save Contact"
+                        onclick={createContact}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>    
+    </lightning-card>
+</template>

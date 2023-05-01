@@ -1,0 +1,20 @@
+<!--sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Imperative Apex Search Contacts DataTable" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                type="search"
+                value={contactValue}
+                label="Search the contacts by their First Name or Last Name"
+                onkeyup={searchContactsHandler}>
+            </lightning-input>
+            <template if:true={contacts}>          
+                <lightning-datatable
+                    key-field="id"
+                    data={contacts}
+                    columns={columns}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

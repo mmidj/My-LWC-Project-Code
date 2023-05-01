@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent to Child-(P2C) 1.Way: Primitive Data">
+        <div class="slds-m-around_medium">
+            <p> Hello. I am parent component and I am sending primitive data to my child component. You will see the information below coming from its HTML file.</p>
+            <c-p2c-primitives-child
+                fullname={name}
+                age={age}
+                title={title}>
+            </c-p2c-primitives-child>
+        </div>
+    </lightning-card>
+</template>

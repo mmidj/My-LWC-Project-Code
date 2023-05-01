@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Conditional Rendering - Button">
+        <div class="slds-m-around_medium">
+            <div class="slds-m-bottom_medium"> If you want to see the information, please click on the button below</div>
+            <div class="slds-align_absolute-center">
+                <lightning-button 
+                    variant="brand" 
+                    label="Get Info"                
+                    onclick={handleClick} 
+                    class="slds-m-right_medium">
+                </lightning-button>
+                <lightning-button 
+                    variant="destructive" 
+                    label="Hide Info"                
+                    onclick={handleClickHide} 
+                    class="slds-m-around_medium">
+                </lightning-button>
+            </div> 
+            <template if:true={getInfo}>
+               <div class="slds-m-top_medium">
+                Hello there<br>
+                I am learning Lightning Web Components from TechPro Education. I am enjoying now these challenging concepts.
+               </div> 
+            </template>                  
+        </div>
+    </lightning-card>
+</template>

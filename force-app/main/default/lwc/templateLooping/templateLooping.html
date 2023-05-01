@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Template Looping for:each">
+        <div class="slds-m-around_medium"><b>Please see the list of Salesforce Certifications below.</b><br>
+            <template for:each={sfCertifications} for:item="sfc" for:index="index">
+                <div key={sfc}>                 
+                   <b>{sfc}</b>
+                </div>
+            </template>
+
+            <template for:each={evenNumbers} for:item="w">
+                <div key={w}>
+                    {w}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

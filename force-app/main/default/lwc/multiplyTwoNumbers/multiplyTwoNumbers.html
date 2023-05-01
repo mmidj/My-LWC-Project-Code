@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Multiply Two numbers">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                type="text"
+                label="Enter number one"
+                value={num1}
+                onchange={handlerNum1}>
+            </lightning-input>
+            <lightning-input
+                type="text"
+                label="Enter number two"
+                value={num2}
+                onchange={handlerNum2}>
+            </lightning-input>
+            <div>
+                The product of {num1} and {num2} equals {product}.
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="updateRecord Function - Case" icon-name="standard:case">
+        <div class="slds-m-around_medium">
+            <form class="caseForm">
+                <lightning-input
+                    label="Enter Subject"
+                    placeholder="Please enter the subject of Case"
+                    name="Subject"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    label="Enter Description"
+                    placeholder="Please enter the description of Case"
+                    name="Description"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    label="Enter Origin"
+                    placeholder="Please enter the origin of Case"
+                    name="Origin"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <div class="slds-align_absolute-center slds-m-top_medium">
+                    <lightning-button
+                        label="Update Case"
+                        variant="brand"
+                        onclick={updateCase}>
+                    </lightning-button>
+                </div>
+            </form>
+        </div>
+    </lightning-card>
+</template>

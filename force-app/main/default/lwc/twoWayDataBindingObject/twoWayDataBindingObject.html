@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Two Way Data binding with Object">
+        <div class="slds-m-around_medium">
+            <!--This part input asks user to enter the country name of the student-->
+            <lightning-input
+                type="text"
+                label="Please type student's country below"
+                value={contact.country}
+                onkeyup={changeHandler}
+                placeholder="enter country name">                
+            </lightning-input>  
+            <!--This part asks user to enter the name-->
+            <lightning-input
+                type="text"
+                label="Please type student's name below"
+                value={contact.stName}
+                onkeyup={changeHandlerName}
+                placeholder="enter student name">                
+            </lightning-input>
+           
+            <div>{contact.stName} lives in {contact.country} and works at {contact.company}.</div>
+        </div>
+    </lightning-card>
+</template>

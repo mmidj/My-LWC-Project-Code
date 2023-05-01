@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Imperative Apex - Opportunity Search by Type" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            <lightning-combobox               
+                label="Select a Type of Opportunity below"
+                value={selectedValue}
+                placeholder="Select Type"
+                options={typeOptions}
+                onchange={handleChange}>
+            </lightning-combobox>
+            <template if:true={opps}>
+                <div class="slds-m-top_small"><strong>SEARCH RESULTS:</strong></div>
+                <template for:each={opps} for:item="w">
+                    <div key={w.Id} class="slds-m-bottom_small">
+                        <strong>Name: </strong>{w.Name}<br>
+                        <strong>Type: </strong>{w.Type}<br>
+                        <strong>Amount: </strong>{w.Amount}<br>
+                        <strong>Stage Name: </strong>{w.StageName}<br>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

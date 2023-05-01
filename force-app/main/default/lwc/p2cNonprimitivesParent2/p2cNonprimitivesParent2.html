@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent to Child-(P2C) Way-2: Sending Object - Account" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_medium"> Hello, I am Parent Component. In this use case, I am sending a list of data along with the column names by utilizing Apex with Wire Services. You will see my data in the below data table which my child component offers. I liked it and I want to use it.</p>
+            <c-p2c-display-records
+                records={accounts.data}
+                fields={columns}>
+            </c-p2c-display-records>
+        </div>
+    </lightning-card>
+</template>

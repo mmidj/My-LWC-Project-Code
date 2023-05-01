@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Lightning Record View Form - Contact Object " icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <lightning-record-view-form
+                record-id={recordId}
+                density="comfy"
+                object-api-name={objectName}>
+                <lightning-output-field field-name={fields.fname}></lightning-output-field>
+                <lightning-output-field field-name={fields.lname}></lightning-output-field>
+                <lightning-output-field field-name={fields.accId}></lightning-output-field>
+                <lightning-output-field field-name={fields.title}></lightning-output-field>
+                
+                <template if:true={showContent}>
+                    <lightning-output-field field-name={fields.phone}></lightning-output-field>
+                    <lightning-output-field field-name={fields.email}></lightning-output-field> 
+                </template>                
+            
+                <lightning-output-field field-name={fields.dept}></lightning-output-field>
+            </lightning-record-view-form> 
+            
+            <div>
+                <template if:false={showContent}>
+                    <b>showContent is false so that you cannot see the email and the phone number of this contact.</b>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

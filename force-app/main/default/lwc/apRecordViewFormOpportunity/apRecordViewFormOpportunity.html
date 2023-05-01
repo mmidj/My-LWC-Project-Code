@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Record View Form - Opportunity" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            Please check the box is to would like to see the CloseDate and Amount fields.
+            <lightning-input
+                type="checkbox"
+                label="Check to see the Amount and CloseDate"
+                checked={showFields}
+                onchange={toggleFields}>
+            </lightning-input>
+            <lightning-record-view-form
+                record-id={recordId}
+                object-api-name={objectName}>
+                <lightning-output-field field-name={fields.name}></lightning-output-field>
+                <lightning-output-field field-name={fields.accName}></lightning-output-field>
+                <lightning-output-field field-name={fields.type}></lightning-output-field>
+                <lightning-output-field field-name={fields.leadSource}></lightning-output-field>
+                <lightning-output-field field-name={fields.stageName}></lightning-output-field>
+                <template if:true={showFields}>
+                    <lightning-output-field field-name={fields.closeDate}></lightning-output-field>
+                    <lightning-output-field field-name={fields.amount}></lightning-output-field>
+                </template>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>

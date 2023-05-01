@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="getPicklistValues Adapter- Opportunity" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            The Home Appliances Record Id is <strong>{rtIdHomeApp}</strong><br>
+            The Kitchen Appliances Record Id is <strong>{rtIdKitchenApp}</strong><br>
+            <lightning-combobox
+                label="Select Stage"
+                value={stageValue}
+                placeholder="Stage"
+                options={stageOptions}
+                onchange={handleChange}>
+            </lightning-combobox>
+            <div>
+                You have selected <b>{stageValue}</b> Stage.
+            </div>
+        </div>
+    </lightning-card>
+</template>

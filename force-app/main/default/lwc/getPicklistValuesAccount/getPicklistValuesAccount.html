@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="getPicklistValues Adapter-Account" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+           <div>
+                Customer Record Type Id is <b>{customerRtId}</b>.
+                <lightning-combobox            
+                    label="Please Select one of the Industry Options below for Customers"
+                    value={selectedValueC}
+                    placeholder="Select Industry Options"
+                    options={industryOptionsC}
+                    onchange={customerEventHandler}>
+                </lightning-combobox>
+               <div>
+                Your Selected Option is <b>{selectedValueC}</b>
+            </div>
+            </div>
+            <div class="slds-m-top_medium">
+                Vendor Record Type Id is <b>{vendorRtId}</b>.
+                <lightning-combobox            
+                    label="Please Select one of the Industry Options below for Vendors"
+                    value={selectedValueV}
+                    placeholder="Select Industry Options"
+                    options={industryOptionsV}
+                    onchange={vendorEventHandler}>
+                </lightning-combobox> 
+                <div>
+                    Your Selected Option is <b>{selectedValueV}</b>
+                </div>
+            </div>
+
+        </div>
+    
+        
+    </lightning-card>
+
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Lighting Base Component - record-form on Account" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectName}
+                fields={fields}
+                columns="1"
+                onsuccess={showSuccessMessage}>
+            </lightning-record-form>                
+        </div>
+    </lightning-card>
+</template>
